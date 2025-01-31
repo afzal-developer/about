@@ -492,7 +492,7 @@ header nav ul li a:hover {
     transform: translate(-50%, -50%) rotate(135deg);
   }
 .cta-button:hover {
-    background: #2980b9;
+    background: green;
     transform: scale(1.05);
   }
 .ripple-effect {
