@@ -124,22 +124,19 @@ header nav ul li a:hover {
     padding: 80px 0;
     background: #fff;
   }
-  
-  .about h2 {
+.about h2 {
     text-align: center;
     font-size: 36px;
     margin-bottom: 20px;
   }
-  
-  .about .tagline {
+.about .tagline {
     text-align: center;
     font-size: 20px;
     color: #3498db;
     font-style: italic;
     margin-bottom: 40px;
   }
-  
-  .about-content {
+.about-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -147,42 +144,34 @@ header nav ul li a:hover {
     gap: 40px;
     align-items: flex-start;
   }
-  
-  .about-text {
+.about-text {
     flex: 1;
   }
-  
-  .about-text p {
+.about-text p {
     font-size: 18px;
     line-height: 1.8;
     margin-bottom: 20px;
   }
-  
-  .about-text span {
+.about-text span {
     color: #3498db;
     font-weight: bold;
   }
-  
-  .about-text strong {
+.about-text strong {
     color: #2c3e50;
   }
-  
-  .about-timeline {
+.about-timeline {
     flex: 1;
   }
-  
-  .about-timeline h3 {
+.about-timeline h3 {
     font-size: 24px;
     margin-bottom: 20px;
     color: #2c3e50;
   }
-  
-  .timeline {
+.timeline {
     position: relative;
     padding-left: 30px;
   }
-  
-  .timeline::before {
+.timeline::before {
     content: '';
     position: absolute;
     left: 5px;
@@ -191,13 +180,11 @@ header nav ul li a:hover {
     width: 2px;
     background: #3498db;
   }
-  
-  .timeline-item {
+.timeline-item {
     position: relative;
     margin-bottom: 30px;
   }
-  
-  .timeline-item::before {
+.timeline-item::before {
     content: '';
     position: absolute;
     left: -28px;
@@ -207,28 +194,24 @@ header nav ul li a:hover {
     background: #3498db;
     border-radius: 50%;
   }
-  
-  .timeline-date {
+.timeline-date {
     font-size: 16px;
     font-weight: bold;
     color: #3498db;
     margin-bottom: 10px;
   }
-  
-  .timeline-content {
+.timeline-content {
     background: #ecf0f1;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
-  
-  .timeline-content h4 {
+.timeline-content h4 {
     font-size: 20px;
     margin-bottom: 10px;
     color: #2c3e50;
   }
-  
-  .timeline-content p {
+.timeline-content p {
     font-size: 16px;
     line-height: 1.6;
   }
