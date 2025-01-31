@@ -120,3 +120,115 @@ header nav ul li a:hover {
     max-width: 200px;
     border-radius: 50%;
   }
+.about {
+    padding: 80px 0;
+    background: #fff;
+  }
+  
+  .about h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .about .tagline {
+    text-align: center;
+    font-size: 20px;
+    color: #3498db;
+    font-style: italic;
+    margin-bottom: 40px;
+  }
+  
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    align-items: flex-start;
+  }
+  
+  .about-text {
+    flex: 1;
+  }
+  
+  .about-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  
+  .about-text span {
+    color: #3498db;
+    font-weight: bold;
+  }
+  
+  .about-text strong {
+    color: #2c3e50;
+  }
+  
+  .about-timeline {
+    flex: 1;
+  }
+  
+  .about-timeline h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  .timeline {
+    position: relative;
+    padding-left: 30px;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: #3498db;
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -28px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background: #3498db;
+    border-radius: 50%;
+  }
+  
+  .timeline-date {
+    font-size: 16px;
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 10px;
+  }
+  
+  .timeline-content {
+    background: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .timeline-content h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+  }
+  
+  .timeline-content p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
