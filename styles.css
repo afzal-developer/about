@@ -290,47 +290,70 @@ header nav ul li a:hover {
   }
 .projects {
     padding: 80px 0;
-    background: #fff;
+    background: #f9f9f9;
   }
 .projects h2 {
     text-align: center;
     font-size: 36px;
     margin-bottom: 40px;
+    color: #2c3e50;
   }
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
   }
+
 .project {
-    background: #ecf0f1;
+    background: #fff;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
   }
+
+.project.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
 .project.hidden {
     display: none;
   }
-.project:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  }
+
 .project-image {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 20px;
+    transition: transform 0.3s ease;
   }
-.project h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #2c3e50;
+
+.project:hover .project-image {
+    transform: scale(0.8);
   }
-.project p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 20px;
+
+.project::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
   }
+
+.project:hover::before {
+    opacity: 1;
+  }
+
 .project .btn {
     background: #3498db;
     color: #fff;
@@ -338,15 +361,21 @@ header nav ul li a:hover {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease;
+    position: relative;
+    z-index: 1;
   }
+
 .project .btn:hover {
     background: #2980b9;
+    transform: translateY(-3px);
   }
+
 .show-more-container {
     text-align: center;
     margin-top: 30px;
   }
+
 #show-more-btn {
     background: #2c3e50;
     color: #fff;
@@ -354,11 +383,14 @@ header nav ul li a:hover {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease;
   }
+
 #show-more-btn:hover {
     background: #34495e;
+    transform: translateY(-3px);
   }
+
 .modal {
     display: none;
     position: fixed;
@@ -371,6 +403,7 @@ header nav ul li a:hover {
     align-items: center;
     z-index: 1000;
   }
+
 .modal-content {
     background: #fff;
     padding: 20px;
@@ -379,11 +412,25 @@ header nav ul li a:hover {
     max-height: 90%;
     overflow: auto;
     position: relative;
+    animation: zoomIn 0.3s ease;
   }
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+  }
+
 .modal-content img {
     width: 100%;
     border-radius: 10px;
   }
+
 .close-modal {
     position: fixed;
     top: 10px;
@@ -391,50 +438,54 @@ header nav ul li a:hover {
     font-size: 30px;
     color: #ffffff;
     cursor: pointer;
+    transition: color 0.3s ease;
   }
+
 .close-modal:hover {
     color: #3498db;
   }
+
 @media (max-width: 768px) {
     .projects h2 {
-      font-size: 32px;
+        font-size: 32px;
     }
-  
+
     .project h3 {
-      font-size: 20px;
+        font-size: 20px;
     }
-  
+
     .project p {
-      font-size: 14px;
+        font-size: 14px;
     }
-  
+
     .modal-content {
-      padding: 15px;
+        padding: 15px;
     }
-  
+
     .close-modal {
-      font-size: 24px;
+        font-size: 24px;
     }
   }
+
 @media (max-width: 480px) {
     .projects h2 {
-      font-size: 28px;
+        font-size: 28px;
     }
-  
+
     .project h3 {
-      font-size: 18px;
+        font-size: 18px;
     }
-  
+
     .project p {
-      font-size: 13px;
+        font-size: 13px;
     }
-  
+
     .modal-content {
-      padding: 10px;
+        padding: 10px;
     }
-  
+
     .close-modal {
-      font-size: 20px;
+        font-size: 20px;
     }
   }
 .contact {
