@@ -62,7 +62,7 @@ header nav ul li a:hover {
     padding: 100px 0;
     background: linear-gradient(135deg, rgba(30, 60, 114, 0.8), rgba(42, 82, 152, 0.8)), url('Web-background.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: fixed;
     color: white;
 }
 .hero-content h1 {
